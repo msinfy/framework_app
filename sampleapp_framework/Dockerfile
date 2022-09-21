@@ -22,7 +22,6 @@ COPY *.csproj .
 #COPY . .
 RUN ECHO ".........DIR......copy 3................"
 
-COPY . .
 RUN dotnet restore
 
 # copy and build everything else
@@ -32,6 +31,7 @@ RUN ECHO ".........DIR...after..copy .4................."
 RUN DIR
 
 
+COPY . .
 WORKDIR /app
 RUN dotnet publish -c Release -o out --no-restore
 
