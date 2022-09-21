@@ -9,31 +9,28 @@
 FROM mcr.microsoft.com/dotnet/framework/sdk:4.8 AS build
 WORKDIR /app
 
-RUN ECHO "...................1............"
-
 RUN PWD
 
 RUN DIR
 
-RUN ECHO ".....................2.................."
-
 # copy csproj and restore as distinct layers
 COPY *.csproj .
 #COPY . .
-RUN ECHO ".........DIR......copy 3................"
-
 RUN dotnet restore
 
 # copy and build everything else
 
 
-RUN ECHO ".........DIR...after..copy .4................."
+RUN ECHO ".........DIR...after..copy .4........."
 RUN DIR
 
 
-#COPY . .
-COPY *.csproj .
+COPY . .
+#COPY *.csproj .
 WORKDIR /app
+
+RUN ECHO ".........DIR...after..555........."
+RUN DIR
 RUN dotnet publish -c Release -o out --no-restore
 
 
