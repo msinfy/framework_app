@@ -26,7 +26,6 @@ COPY . .
 RUN dotnet restore
 
 # copy and build everything else
-COPY . .
 
 
 RUN ECHO ".........DIR...after..copy .4................."
