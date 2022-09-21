@@ -22,7 +22,7 @@ RUN ECHO "................................................"
 COPY . .
 RUN ECHO ".........DIR......copy ......................................."
 
-COPY sampleapp_framework.csproj .
+COPY ./sampleapp_framework.csproj .
 RUN dotnet restore
 
 # copy and build everything else
