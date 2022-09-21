@@ -9,8 +9,15 @@
 FROM mcr.microsoft.com/dotnet/framework/sdk:4.8 AS build
 WORKDIR /app
 
+RUN ECHO "................................................"
+
+RUN PWD
+
+RUN ECHO "................................................"
+
 # copy csproj and restore as distinct layers
-COPY *.csproj .
+#COPY *.csproj .
+COPY . .
 RUN dotnet restore
 
 # copy and build everything else
