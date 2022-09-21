@@ -31,7 +31,8 @@ RUN ECHO ".........DIR...after..copy .4................."
 RUN DIR
 
 
-COPY . .
+#COPY . .
+COPY *.csproj .
 WORKDIR /app
 RUN dotnet publish -c Release -o out --no-restore
 
