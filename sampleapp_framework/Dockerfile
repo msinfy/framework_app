@@ -9,18 +9,18 @@
 FROM mcr.microsoft.com/dotnet/framework/sdk:4.8 AS build
 WORKDIR /app
 
-RUN ECHO "................................................"
+RUN ECHO "...................1............"
 
 RUN PWD
 
 RUN DIR
 
-RUN ECHO "................................................"
+RUN ECHO ".....................2.................."
 
 # copy csproj and restore as distinct layers
-#COPY *.csproj .
-COPY . .
-RUN ECHO ".........DIR......copy ......................................."
+COPY *.csproj .
+#COPY . .
+RUN ECHO ".........DIR......copy 3................"
 
 COPY . .
 RUN dotnet restore
@@ -29,7 +29,7 @@ RUN dotnet restore
 COPY . .
 
 
-RUN ECHO ".........DIR...after..copy ......................................."
+RUN ECHO ".........DIR...after..copy .4................."
 RUN DIR
 
 
