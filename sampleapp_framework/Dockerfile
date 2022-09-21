@@ -20,7 +20,7 @@ RUN ECHO "................................................"
 # copy csproj and restore as distinct layers
 #COPY *.csproj .
 COPY . .
-RUN ECHO ".........DIR...after...copy ......................................."
+RUN ECHO ".........DIR......copy ......................................."
 
 COPY sampleapp_framework.csproj .
 RUN dotnet restore
@@ -29,7 +29,7 @@ RUN dotnet restore
 COPY . .
 
 
-RUN ECHO ".........DIR   aftrt copy ......................................."
+RUN ECHO ".........DIR...after..copy ......................................."
 RUN DIR
 
 
