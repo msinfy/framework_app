@@ -24,6 +24,12 @@ RUN dotnet restore
 
 # copy and build everything else
 COPY . .
+
+
+RUN ECHO ".........DIR   aftrt copy ......................................."
+RUN DIR
+
+
 WORKDIR /app
 RUN dotnet publish -c Release -o out --no-restore
 
