@@ -13,6 +13,8 @@ RUN ECHO "................................................"
 
 RUN PWD
 
+RUN DIR
+
 RUN ECHO "................................................"
 
 # copy csproj and restore as distinct layers
