@@ -41,7 +41,8 @@ COPY sampleapp_framework/*.config ./sampleapp_framework/
 RUN nuget restore
 
 # copy everything else and build app
-COPY sampleapp_framework/. ./sampleapp_framework/
+#COPY sampleapp_framework/. ./sampleapp_framework/
+COPY sampleapp_framework/. ./
 WORKDIR /app/sampleapp_framework
 RUN msbuild /p:Configuration=Release -r:False
 
