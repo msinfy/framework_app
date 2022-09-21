@@ -20,6 +20,9 @@ RUN ECHO "................................................"
 # copy csproj and restore as distinct layers
 #COPY *.csproj .
 COPY . .
+RUN ECHO ".........DIR   aftrt copy ......................................."
+
+COPY *.csproj .
 RUN dotnet restore
 
 # copy and build everything else
