@@ -1,8 +1,8 @@
 # directories
-#**/packages/
-#**/bin/
-#**/obj/
-#**/out/
+**/packages/
+**/bin/
+**/obj/
+**/out/
 
 # files
 Dockerfile*
