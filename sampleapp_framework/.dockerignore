@@ -1,8 +1,5 @@
-#*
-#!obj\Docker\publish\*
-#!obj\Docker\empty\
-
 # directories
+**/packages/
 **/bin/
 **/obj/
 **/out/
